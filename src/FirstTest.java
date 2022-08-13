@@ -620,6 +620,33 @@ public class FirstTest {
         );
     }
 
+    @Test
+    public void articleHasTitle(){
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Can`t find search Wikipedia input",
+                10
+        );
+
+        waitForElementAndSendKeys(
+                By.xpath("//*[contains(@text, 'Search…')]"),
+                "Java",
+                "Can`t find search input",
+                10
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='Java (programming language)']"),
+                "Cannot  find 'Java (programming language)' title topic searching",
+                15
+        );
+
+        String search_result_locator = "//*[@text='Java (programming language)']";
+        assertElementPresent(
+                By.xpath(search_result_locator),
+                "Cannot find title 'Java (programming language)' "
+        );
+    }
 
 
         private WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds) {
@@ -733,5 +760,14 @@ public class FirstTest {
     {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
         return element.getAttribute(attribute);
+    }
+
+    private void assertElementPresent(By by, String error_message)
+    {
+        int amountElements = getAmountOfElements(by);
+        Assert.assertTrue(
+                error_message,
+                amountElements > 0
+        );
     }
 }
