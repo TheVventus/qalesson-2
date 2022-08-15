@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="588308f7-1c5b-431c-a40d-dd652ed24bd3" name="Changes" comment="Feature: complete Ex5">
+    <list default="true" id="588308f7-1c5b-431c-a40d-dd652ed24bd3" name="Changes" comment="Feature: complete Ex6">
+      <change afterPath="$PROJECT_DIR$/src/lib/CoreTestCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/ui/MainPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/ui/NavigationUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/ArticleTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/ChangeAppConditionTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/MyListsTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/SearchTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
     </list>
@@ -12,6 +22,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,52 +53,58 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.FirstTest.articleHasTitle">
-    <configuration name="FirstTest.articleHasTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ArticleTests.testCompareArticleTitle">
+    <configuration name="ArticleTests.testCompareArticleTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaAppiumAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="articleHasTitle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstTest.assertTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaAppiumAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="assertTitle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstTest.saveTwoArticles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaAppiumAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="saveTwoArticles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstTest.testCompareArticleTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaAppiumAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ArticleTests" />
       <option name="METHOD_NAME" value="testCompareArticleTitle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.testSaveTwoArticlesInMyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest.testAmountOfEmptySearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaAppiumAutomation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="testSaveTwoArticlesInMyList" />
+      <option name="METHOD_NAME" value="testAmountOfEmptySearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.testAmountOfNotEmptySearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaAppiumAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testAmountOfNotEmptySearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.testChangeScreenOrientationOnSearchResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaAppiumAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testChangeScreenOrientationOnSearchResults" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.testCheckSearchArticleInBackground" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaAppiumAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testCheckSearchArticleInBackground" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FirstTest.articleHasTitle" />
-        <item itemvalue="JUnit.FirstTest.assertTitle" />
-        <item itemvalue="JUnit.FirstTest.testSaveTwoArticlesInMyList" />
-        <item itemvalue="JUnit.FirstTest.testCompareArticleTitle" />
-        <item itemvalue="JUnit.FirstTest.saveTwoArticles" />
+        <item itemvalue="JUnit.ArticleTests.testCompareArticleTitle" />
+        <item itemvalue="JUnit.FirstTest.testCheckSearchArticleInBackground" />
+        <item itemvalue="JUnit.FirstTest.testChangeScreenOrientationOnSearchResults" />
+        <item itemvalue="JUnit.FirstTest.testAmountOfEmptySearch" />
+        <item itemvalue="JUnit.FirstTest.testAmountOfNotEmptySearch" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660417385758</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feature: complete Ex6">
+      <created>1660418275399</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660418275399</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,14 +159,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Feature: complete Ex5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: complete Ex5" />
+    <MESSAGE value="Feature: complete Ex6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: complete Ex6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/FirstTest.java</url>
-          <line>144</line>
+          <line>16</line>
           <properties class="FirstTest" method="testCancelSearchWithFindArticles">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -145,26 +176,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/FirstTest.java</url>
-          <line>184</line>
-          <properties class="FirstTest" method="testSwipeArticle">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/FirstTest.java</url>
-          <line>623</line>
-          <properties class="FirstTest" method="assertTitle">
+          <line>215</line>
+          <properties class="FirstTest" method="testArticleHasTitle">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/FirstTest.java</url>
-          <line>465</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
