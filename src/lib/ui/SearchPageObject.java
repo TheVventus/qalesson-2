@@ -11,7 +11,8 @@ public class SearchPageObject extends MainPageObject{
         SEARCH_CANCEL_BUTTON = "org.wikipedia:id/search_close_btn",
         SEARCH_RESULT_BY_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='{SUBSTRING}']",
         SEARCH_RESULT_ELEMENT = "//*[@resource-id='org.wikipedia:id/search_results_list']/*[@resource-id='org.wikipedia:id/page_list_item_container']",
-        SEARCH_EMPTY_RESULT_ELEMENT = "//*[@text='No results found']";
+        SEARCH_EMPTY_RESULT_ELEMENT = "//*[@text='No results found']",
+        SEARCH_TEXT_TPL = "//*[contains(@text, '{SUBSTRING}')]";
 
     public SearchPageObject(AppiumDriver driver) {
         super(driver);
@@ -20,6 +21,10 @@ public class SearchPageObject extends MainPageObject{
     /* TEMPLATES METHODS */
     private static String getResultSearchElement(String substring) {
         return SEARCH_RESULT_BY_SUBSTRING_TPL.replace("{SUBSTRING}", substring);
+    }
+
+    private static String getResultSearchElementOfText(String search_text) {
+        return SEARCH_TEXT_TPL.replace("{SUBSTRING}", search_text);
     }
     /* TEMPLATES METHODS */
 
@@ -69,5 +74,12 @@ public class SearchPageObject extends MainPageObject{
 
     public void assertThereIsNoResultOfSearch() {
         this.assertElementNotPresent(By.xpath(SEARCH_RESULT_ELEMENT), "We supposed not to find any results");
+    }
+    public void assertElementHasText(String search_text, String text_element) {
+        this.assertElementHasText(
+                By.xpath(getResultSearchElementOfText(search_text)),
+                text_element,
+                "We see unexpected text"
+        );
     }
 }
